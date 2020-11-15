@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "4369de0ee1ee6b71de9e",
-    "url": "/dooboox/static/css/main.abddf1a4.chunk.css"
+    "revision": "2f3fc66173996a11e30d",
+    "url": "/dooboox/static/css/main.c228f63a.chunk.css"
   },
   {
-    "revision": "4369de0ee1ee6b71de9e",
+    "revision": "2f3fc66173996a11e30d",
     "url": "/dooboox/static/js/main.b60311a4.chunk.js"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/dooboox/static/js/3.ce160b2c.chunk.js"
   },
   {
-    "revision": "52aff5e425f115991bd5cd5d287f6fd5",
+    "revision": "299fad766ee892b8d5f574761dbae9bd",
     "url": "/dooboox/index.html"
   }
 ];
