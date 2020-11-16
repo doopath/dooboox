@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dooboox/static/css/main.4b662dff.chunk.css",
-    "main.js": "/dooboox/static/js/main.e50609fe.chunk.js",
-    "main.js.map": "/dooboox/static/js/main.e50609fe.chunk.js.map",
+    "main.js": "/dooboox/static/js/main.b6dc7368.chunk.js",
+    "main.js.map": "/dooboox/static/js/main.b6dc7368.chunk.js.map",
     "runtime-main.js": "/dooboox/static/js/runtime-main.f918e788.js",
     "runtime-main.js.map": "/dooboox/static/js/runtime-main.f918e788.js.map",
     "static/css/2.68829e54.chunk.css": "/dooboox/static/css/2.68829e54.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.68829e54.chunk.css",
     "static/js/2.3aae4ace.chunk.js",
     "static/css/main.4b662dff.chunk.css",
-    "static/js/main.e50609fe.chunk.js"
+    "static/js/main.b6dc7368.chunk.js"
   ]
 }
