@@ -1,39 +1,39 @@
 self.__precacheManifest = [
   {
-    "revision": "6a38730d1429659ac238",
-    "url": "/dooboox/static/css/main.0c928ece.chunk.css"
+    "revision": "09f2e56cdd938075244b",
+    "url": "/dooboox/static/css/main.2ce72ba1.chunk.css"
   },
   {
-    "revision": "6a38730d1429659ac238",
-    "url": "/dooboox/static/js/main.9db81f6d.chunk.js"
+    "revision": "09f2e56cdd938075244b",
+    "url": "/dooboox/static/js/main.32f1e8d0.chunk.js"
   },
   {
-    "revision": "e698abd8abb247365e2b",
-    "url": "/dooboox/static/js/runtime~main.e1e408fd.js"
+    "revision": "a525618a66412b85a040",
+    "url": "/dooboox/static/js/runtime~main.101ae3f4.js"
   },
   {
-    "revision": "20c41e55794921ff4c76",
+    "revision": "72668720a1970c314b67",
     "url": "/dooboox/static/css/2.20cad54e.chunk.css"
   },
   {
-    "revision": "20c41e55794921ff4c76",
-    "url": "/dooboox/static/js/2.a1d7271d.chunk.js"
+    "revision": "72668720a1970c314b67",
+    "url": "/dooboox/static/js/2.23279ff5.chunk.js"
   },
   {
-    "revision": "b13cf98f3b348df343fa",
-    "url": "/dooboox/static/js/3.3ab9d818.chunk.js"
+    "revision": "a5bb7d5c89e5f3e0c78d",
+    "url": "/dooboox/static/js/3.c9b0ffbd.chunk.js"
   },
   {
     "revision": "98206e1ca712845159f663a45de6c15d",
     "url": "/dooboox/static/media/fish.98206e1c.jpeg"
   },
   {
-    "revision": "5cb7edfceb233100075dc9a1e12e8da3",
-    "url": "/dooboox/static/media/roboto-latin-100.5cb7edfc.woff"
-  },
-  {
     "revision": "7370c3679472e9560965ff48a4399d0b",
     "url": "/dooboox/static/media/roboto-latin-100.7370c367.woff2"
+  },
+  {
+    "revision": "5cb7edfceb233100075dc9a1e12e8da3",
+    "url": "/dooboox/static/media/roboto-latin-100.5cb7edfc.woff"
   },
   {
     "revision": "f8b1df51ba843179fa1cc9b53d58127a",
@@ -44,24 +44,24 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-100italic.f9e8e590.woff"
   },
   {
-    "revision": "b00849e00f4c2331cddd8ffb44a6720b",
-    "url": "/dooboox/static/media/roboto-latin-300.b00849e0.woff"
-  },
-  {
     "revision": "ef7c6637c68f269a882e73bcb57a7f6a",
     "url": "/dooboox/static/media/roboto-latin-300.ef7c6637.woff2"
+  },
+  {
+    "revision": "b00849e00f4c2331cddd8ffb44a6720b",
+    "url": "/dooboox/static/media/roboto-latin-300.b00849e0.woff"
   },
   {
     "revision": "14286f3ba79c6627433572dfa925202e",
     "url": "/dooboox/static/media/roboto-latin-300italic.14286f3b.woff2"
   },
   {
-    "revision": "4df32891a5f2f98a363314f595482e08",
-    "url": "/dooboox/static/media/roboto-latin-300italic.4df32891.woff"
-  },
-  {
     "revision": "479970ffb74f2117317f9d24d9e317fe",
     "url": "/dooboox/static/media/roboto-latin-400.479970ff.woff2"
+  },
+  {
+    "revision": "4df32891a5f2f98a363314f595482e08",
+    "url": "/dooboox/static/media/roboto-latin-300italic.4df32891.woff"
   },
   {
     "revision": "60fa3c0614b8fb2f394fa29944c21540",
@@ -84,12 +84,12 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-500.87284894.woff"
   },
   {
-    "revision": "db4a2a231f52e497c0191e8966b0ee58",
-    "url": "/dooboox/static/media/roboto-latin-500italic.db4a2a23.woff2"
-  },
-  {
     "revision": "288ad9c6e8b43cf02443a1f499bdf67e",
     "url": "/dooboox/static/media/roboto-latin-500italic.288ad9c6.woff"
+  },
+  {
+    "revision": "db4a2a231f52e497c0191e8966b0ee58",
+    "url": "/dooboox/static/media/roboto-latin-500italic.db4a2a23.woff2"
   },
   {
     "revision": "2735a3a69b509faf3577afd25bdf552e",
@@ -112,19 +112,19 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-900.9b3766ef.woff2"
   },
   {
-    "revision": "bb1e4dc6333675d11ada2e857e7f95d7",
-    "url": "/dooboox/static/media/roboto-latin-900.bb1e4dc6.woff"
-  },
-  {
     "revision": "ebf6d1640ccddb99fb49f73c052c55a8",
     "url": "/dooboox/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  {
+    "revision": "bb1e4dc6333675d11ada2e857e7f95d7",
+    "url": "/dooboox/static/media/roboto-latin-900.bb1e4dc6.woff"
   },
   {
     "revision": "28f9151055c950874d2c6803a39b425b",
     "url": "/dooboox/static/media/roboto-latin-900italic.28f91510.woff"
   },
   {
-    "revision": "5414c9df2bec5f9d9dc4ebc1aa528b48",
+    "revision": "fc14ca836c0b37d7848b3ed2b29afd1d",
     "url": "/dooboox/index.html"
   }
 ];
