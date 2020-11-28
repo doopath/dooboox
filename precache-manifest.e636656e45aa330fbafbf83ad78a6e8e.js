@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "1271a6fc7cb7f24da8f9",
+    "revision": "e9c123509c3c45f24fa7",
     "url": "/dooboox/static/css/main.d7774744.chunk.css"
   },
   {
-    "revision": "1271a6fc7cb7f24da8f9",
-    "url": "/dooboox/static/js/main.a0026e9f.chunk.js"
+    "revision": "e9c123509c3c45f24fa7",
+    "url": "/dooboox/static/js/main.1e086220.chunk.js"
   },
   {
     "revision": "5f265a3fe113b11367aa",
     "url": "/dooboox/static/js/runtime~main.c645ccdd.js"
   },
   {
-    "revision": "7d88a64890904ecce2ac",
+    "revision": "bc4003cb00ccd398f26b",
     "url": "/dooboox/static/css/2.20cad54e.chunk.css"
   },
   {
-    "revision": "7d88a64890904ecce2ac",
-    "url": "/dooboox/static/js/2.fcdfe3fb.chunk.js"
+    "revision": "bc4003cb00ccd398f26b",
+    "url": "/dooboox/static/js/2.5c0ae07a.chunk.js"
   },
   {
     "revision": "4e345bc9c0c7784bb89b",
@@ -44,12 +44,12 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-100.7370c367.woff2"
   },
   {
-    "revision": "5cb7edfceb233100075dc9a1e12e8da3",
-    "url": "/dooboox/static/media/roboto-latin-100.5cb7edfc.woff"
-  },
-  {
     "revision": "f8b1df51ba843179fa1cc9b53d58127a",
     "url": "/dooboox/static/media/roboto-latin-100italic.f8b1df51.woff2"
+  },
+  {
+    "revision": "5cb7edfceb233100075dc9a1e12e8da3",
+    "url": "/dooboox/static/media/roboto-latin-100.5cb7edfc.woff"
   },
   {
     "revision": "f9e8e590b4e0f1ff83469bb2a55b8488",
@@ -68,12 +68,12 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-300italic.14286f3b.woff2"
   },
   {
-    "revision": "4df32891a5f2f98a363314f595482e08",
-    "url": "/dooboox/static/media/roboto-latin-300italic.4df32891.woff"
-  },
-  {
     "revision": "479970ffb74f2117317f9d24d9e317fe",
     "url": "/dooboox/static/media/roboto-latin-400.479970ff.woff2"
+  },
+  {
+    "revision": "4df32891a5f2f98a363314f595482e08",
+    "url": "/dooboox/static/media/roboto-latin-300italic.4df32891.woff"
   },
   {
     "revision": "60fa3c0614b8fb2f394fa29944c21540",
@@ -92,12 +92,12 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-500.020c97dc.woff2"
   },
   {
-    "revision": "db4a2a231f52e497c0191e8966b0ee58",
-    "url": "/dooboox/static/media/roboto-latin-500italic.db4a2a23.woff2"
-  },
-  {
     "revision": "87284894879f5b1c229cb49c8ff6decc",
     "url": "/dooboox/static/media/roboto-latin-500.87284894.woff"
+  },
+  {
+    "revision": "db4a2a231f52e497c0191e8966b0ee58",
+    "url": "/dooboox/static/media/roboto-latin-500italic.db4a2a23.woff2"
   },
   {
     "revision": "288ad9c6e8b43cf02443a1f499bdf67e",
@@ -136,7 +136,7 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-900italic.28f91510.woff"
   },
   {
-    "revision": "ae37b6491773fb3c821f14a5cea1d353",
+    "revision": "562c4a846bc67850516670c6d5471487",
     "url": "/dooboox/index.html"
   }
 ];
