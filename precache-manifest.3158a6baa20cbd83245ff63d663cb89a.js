@@ -60,12 +60,12 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-300.ef7c6637.woff2"
   },
   {
-    "revision": "b00849e00f4c2331cddd8ffb44a6720b",
-    "url": "/dooboox/static/media/roboto-latin-300.b00849e0.woff"
-  },
-  {
     "revision": "14286f3ba79c6627433572dfa925202e",
     "url": "/dooboox/static/media/roboto-latin-300italic.14286f3b.woff2"
+  },
+  {
+    "revision": "b00849e00f4c2331cddd8ffb44a6720b",
+    "url": "/dooboox/static/media/roboto-latin-300.b00849e0.woff"
   },
   {
     "revision": "4df32891a5f2f98a363314f595482e08",
@@ -76,12 +76,12 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-400.479970ff.woff2"
   },
   {
-    "revision": "60fa3c0614b8fb2f394fa29944c21540",
-    "url": "/dooboox/static/media/roboto-latin-400.60fa3c06.woff"
-  },
-  {
     "revision": "51521a2a8da71e50d871ac6fd2187e87",
     "url": "/dooboox/static/media/roboto-latin-400italic.51521a2a.woff2"
+  },
+  {
+    "revision": "60fa3c0614b8fb2f394fa29944c21540",
+    "url": "/dooboox/static/media/roboto-latin-400.60fa3c06.woff"
   },
   {
     "revision": "fe65b8335ee19dd944289f9ed3178c78",
@@ -104,20 +104,20 @@ self.__precacheManifest = [
     "url": "/dooboox/static/media/roboto-latin-500italic.288ad9c6.woff"
   },
   {
-    "revision": "2735a3a69b509faf3577afd25bdf552e",
-    "url": "/dooboox/static/media/roboto-latin-700.2735a3a6.woff2"
-  },
-  {
     "revision": "adcde98f1d584de52060ad7b16373da3",
     "url": "/dooboox/static/media/roboto-latin-700.adcde98f.woff"
   },
   {
-    "revision": "da0e717829e033a69dec97f1e155ae42",
-    "url": "/dooboox/static/media/roboto-latin-700italic.da0e7178.woff2"
+    "revision": "2735a3a69b509faf3577afd25bdf552e",
+    "url": "/dooboox/static/media/roboto-latin-700.2735a3a6.woff2"
   },
   {
     "revision": "81f57861ed4ac74741f5671e1dff2fd9",
     "url": "/dooboox/static/media/roboto-latin-700italic.81f57861.woff"
+  },
+  {
+    "revision": "da0e717829e033a69dec97f1e155ae42",
+    "url": "/dooboox/static/media/roboto-latin-700italic.da0e7178.woff2"
   },
   {
     "revision": "9b3766ef4a402ad3fdeef7501a456512",
