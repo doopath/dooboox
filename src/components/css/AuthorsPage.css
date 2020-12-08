@@ -1,0 +1,76 @@
+/* Authors page styles */
+
+.tp-author-block {
+  display: block;
+  width: 100%;
+  height: auto;
+  word-wrap: break-word;
+  color: #d8dee9;
+  margin: 30px 0;
+}
+
+.tp-upper-case {
+  color: #bf616a;
+  font-family: "Macondo Swash Caps", cursive;
+  font-weight: 800;
+}
+
+.tp-author-name {
+  color: #eceff4;
+  font-size: 18px;
+}
+
+.tp-author-role svg {
+  display: inline-block;
+  margin-left: 15px;
+  color: #b48ead;
+}
+
+.tp-author-role span {
+  color: #88c0d0;
+  font-size: 17px;
+}
+
+.tp-author-role span:nth-child(2) {
+  color: #8fbcbb;
+}
+
+.tp-author-work_until {
+  color: #88c0d0;
+}
+
+.tp-author-work_text {
+  white-space: pre-line;
+}
+
+@media (max-width: 900px) {
+  .tp-author-work_text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 690px) {
+  .tp-author-work {
+    font-size: 13px;
+  }
+  .tp-author-work_text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 650px) {
+  .tp-author-role span,
+  .tp-author-role {
+    font-size: 13px;
+  }
+  .tp-author-name {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tp-author-role span,
+  .tp-author-role {
+    font-size: 11px;
+  }
+}

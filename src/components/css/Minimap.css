@@ -1,0 +1,87 @@
+/* Minimap styles */
+
+.minimap {
+  height: auto;
+  max-height: 2500px;
+  position: fixed;
+  z-index: 15;
+  transition: 0.4s linear;
+  transform: scale(0.2) translate(-310%, -4300px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  opacity: 0;
+  padding: 50px;
+  box-shadow: 0 0 20px 1px #434c5e;
+  backdrop-filter: blur(20px);
+  background: rgba(46, 52, 64, 0.5);
+  border-radius: 30px 0 0 30px;
+}
+
+.minimap::-webkit-scrollbar {
+  width: 50px;
+}
+
+.minimap::-webkit-scrollbar-thumb {
+  display: block;
+  cursor: pointer;
+}
+
+.minimap_active {
+  opacity: 1;
+  transform: scale(0.2) translate(-180%, -4300px);
+}
+
+#minimapButton {
+  display: grid;
+  position: fixed;
+  transition: 0.2s linear;
+  width: 6%;
+  height: 30px;
+  background: #8fbcbb;
+  border-radius: 5px;
+  place-items: center;
+  color: #e5e9f0;
+  font-weight: 700;
+  cursor: pointer;
+  top: 90px;
+  left: 3%;
+  user-select: none;
+}
+
+.minimap #minimapButton {
+  display: none;
+}
+
+.minimap .tp-page-id {
+  display: none;
+}
+
+#minimapButton:hover {
+  box-shadow: 0 0 5px 5px rgba(143, 188, 187, 0.8);
+}
+
+.minimapButton_active {
+  background: #4c566a !important;
+}
+
+.minimapButton_active:hover {
+  box-shadow: 0 0 5px 5px rgba(143, 188, 187, 0.8);
+}
+
+@media (max-width: 1500px) {
+  #minimapButton {
+    font-size: 13px;
+  }
+  .minimapButton_active {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1279px) {
+  #minimap {
+    display: none;
+  }
+  #minimapButton {
+    display: none;
+  }
+}
