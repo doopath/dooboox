@@ -1,7 +1,7 @@
 import axios from "axios";
 import { Component } from "react";
 
-export abstract class AbstractPage extends Component {
+export class AbstractPage extends Component {
   public props: object;
   private type: string;
 
@@ -21,7 +21,7 @@ export abstract class AbstractPage extends Component {
     );
   };
 
-  protected setPageSearcherValue = (newValue: number | "") => {
+  protected setPageSearcherValue = (newValue: number | ""): void => {
     this.props["actionCreator"]("SET_PAGE_SEARCHER_VALUE", newValue);
   };
 }

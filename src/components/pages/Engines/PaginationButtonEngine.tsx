@@ -8,17 +8,21 @@ export class PaginationButtonEngine implements Engine {
   private buttonContent: string;
   private onClick: Function | false;
 
-  public constructor(type: "previous" | "next", switchingPageId: number, onClick?: Function) {
+  public constructor(
+    type: "previous" | "next",
+    switchingPageId: number | string,
+    onClick?: Function
+  ) {
     this.type = type;
     this.button = <div></div>;
     this.onClick = onClick || false;
 
     if (type === "previous") {
       this.buttonContent = "Previous";
-      this.switchingPageId = switchingPageId - 1;
+      this.switchingPageId = Number(switchingPageId) - 1;
     } else {
       this.buttonContent = "Next";
-      this.switchingPageId = switchingPageId + 1;
+      this.switchingPageId = Number(switchingPageId) + 1;
     }
   }
 

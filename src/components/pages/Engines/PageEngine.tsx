@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React from "react";
 import axios from "axios";
 import { AbstractPage } from "../AbstractPage";
 
@@ -9,16 +9,18 @@ import { CodeBlock } from "../template/CodeBlock";
 import { Title } from "../template/Title";
 
 import { Engine } from "./Engine";
-import { PaginationButtonEngine } from "./PaginationButtonEngine";
 import { ThemesBlockEngine } from "./ThemesBlockEngine";
 import { AuthorBlockEngine } from "./AuthorBlockEngine";
+import { PaginationEngine } from "./PaginationEngine";
 
-export abstract class PageEngine extends AbstractPage implements Engine {
+export class PageEngine extends AbstractPage implements Engine {
   private page: Array<object>;
+  private pagination: JSX.Element;
 
   public constructor(props: object) {
     super(props);
     this.page = [];
+    this.pagination = <></>;
   }
 
   public getElement = (): JSX.Element => {
@@ -94,51 +96,19 @@ export abstract class PageEngine extends AbstractPage implements Engine {
     }
   };
 
-  protected createPagination = (pageId: number, nextPage: boolean) => {
-    let previous,
-      next: ReactElement | string = "";
+  protected createPagination = (pageId: number, nextPage: boolean): void => {
+    const pagination = new PaginationEngine({
+      ...this.props,
+      pageId,
+      nextPage,
+      setPage: this.setPage,
+      setPageSearcherValue: this.setPageSearcherValue,
+    });
+    pagination.create();
+    this.pagination = pagination.getElement();
+  };
 
-    if (!(pageId < 2)) {
-      let previousButton;
-
-      if (typeof pageId === "string") {
-        previousButton = new PaginationButtonEngine("previous", pageId);
-      } else {
-        previousButton = new PaginationButtonEngine("previous", pageId, this.setPage);
-      }
-      previousButton.create();
-      previous = previousButton.getElement();
-    }
-
-    if (nextPage) {
-      const nextButton = new PaginationButtonEngine("next", pageId, this.setPage);
-      nextButton.create();
-      next = nextButton.getElement();
-    }
-
-    return (
-      <div className="tp-pagination_block">
-        {previous}
-        {next}
-        <div className="tp-page-searcher">
-          <input
-            type="text"
-            id="pageSearcher"
-            placeholder="Page number"
-            value={this.props["pageSearcherValue"]}
-            onChange={(e): void => this.setPageSearcherValue(Number(e.target.value) || "")}
-          />
-          <div
-            key={this.props["getUniqueKey"]()}
-            className="tp-page-searcher_button"
-            onClick={(): void => this.setPage(this.props["pageSearcherValue"])}
-          >
-            <a href="#" key={this.props["getUniqueKey"]()}>
-              <span>Search</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    );
+  protected getPagination = (): JSX.Element => {
+    return this.pagination;
   };
 }

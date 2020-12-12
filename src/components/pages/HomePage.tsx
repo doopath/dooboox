@@ -32,6 +32,7 @@ export class HomePage extends Page {
             {this.create()}
             {this.getElement()}
             {this.createPagination(this.props["currentPageId"], this.props["nextPage"])}
+            {this.getPagination()}
           </div>
         </div>
       </div>

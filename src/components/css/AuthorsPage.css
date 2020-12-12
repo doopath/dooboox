@@ -20,6 +20,11 @@
   font-size: 18px;
 }
 
+.tp-author-name a:hover {
+  transition: text-shadow 0.2s linear;
+  text-shadow: 1px 1px 5px #eceff4;
+}
+
 .tp-author-role svg {
   display: inline-block;
   margin-left: 15px;

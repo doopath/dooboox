@@ -10,25 +10,25 @@ export class Footer extends Component {
         <div className="footer_container">
           <div className="footer-item">
             <ul className="footer-menu-list">
-              <p className="footer-menu-title">МЕНЮ</p>
+              <p className="footer-menu-title">MENU</p>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  ГЛАВНАЯ
+                  MAIN
                 </a>
               </li>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  СОДЕРЖАНИЕ
+                  SUMMARY
                 </a>
               </li>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  АВТОРЫ
+                  AUTHORS
                 </a>
               </li>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  О ПРОЕКТЕ
+                  ABOUT
                 </a>
               </li>
             </ul>
@@ -39,22 +39,22 @@ export class Footer extends Component {
               <p className="footer-menu-title">ТЕМЫ</p>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  ОПРЕДЕЛЕНИЕ
+                  DEFINITION
                 </a>
               </li>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  АЛГОРИТМЫ
+                  ALGORITHMS
                 </a>
               </li>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  ИСТОРИЯ
+                  HISTORY
                 </a>
               </li>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
-                  ПРИМЕРЫ
+                  SAMPLES
                 </a>
               </li>
             </ul>
@@ -62,7 +62,7 @@ export class Footer extends Component {
 
           <div className="footer-item">
             <ul className="footer-menu-list">
-              <p className="footer-menu-title">АВТОРЫ</p>
+              <p className="footer-menu-title">AUTHORS</p>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
                   NICCOLO
