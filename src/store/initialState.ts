@@ -41,9 +41,9 @@ const initialState: object = {
     api: {
       getPageUrl(type: string, id?: number): string {
         if (id) {
-          return `https://sha1om.github.io/dooboox_api/pages/${type}/page-${id}/index.json`;
+          return `https://doopath.github.io/dooboox_api/pages/${type}/page-${id}/index.json`;
         } else {
-          return `https://sha1om.github.io/dooboox_api/pages/${type}/index.json`;
+          return `https://doopath.github.io/dooboox_api/pages/${type}/index.json`;
         }
       },
     },
@@ -51,7 +51,7 @@ const initialState: object = {
     images: {
       fish,
       nonePage,
-      preloader: "https://sha1om.github.io/dooboox_api/images/preloader.gif",
+      preloader: "https://doopath.github.io/dooboox_api/images/preloader.gif",
       logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     },
 
