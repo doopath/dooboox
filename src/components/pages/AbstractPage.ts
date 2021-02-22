@@ -15,12 +15,14 @@ export class AbstractPage extends Component {
     this.type = props["type"] + (this.excludeName ? "" : "Page");
   }
 
-  private setCachedPage = (pageId?: string): void => {
+  private setCachedPage = (pageId?: string): boolean => {
     let id: string = String(pageId || this.type);
 
     if (cacher.checkElement(id)) {
       this.props["actionCreator"]("SET_CURRENT_PAGE", cacher.getValue(id));
-      return;
+      return true;
+    } else {
+      return false;
     }
   }
 
@@ -40,8 +42,9 @@ export class AbstractPage extends Component {
      * Set the cached page if it exists else get a new page from the server and set it.
      */
 
-    this.setCachedPage(pageId);
-    this.setFetchedPage(pageId);
+    if (!this.setCachedPage(pageId)) {
+      this.setFetchedPage(pageId);
+    }
   };
 
   protected setPageSearcherValue = (newValue: number | ""): void => {
