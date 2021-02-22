@@ -5,7 +5,7 @@ export class Redactor extends Page {
   private nonePage: string;
 
   public constructor(props: object) {
-    super({ ...props, type: "authorsPage/author-2" });
+    super({ ...props, type: "authorsPage/author-2", exclude: true });
     this.nonePage = props["nonePage"];
   }
 

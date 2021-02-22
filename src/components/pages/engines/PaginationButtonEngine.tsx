@@ -3,26 +3,25 @@ import React from "react";
 
 export class PaginationButtonEngine implements Engine {
   private type: "previous" | "next";
-  private switchingPageId: number;
+  private switchingPageId: string;
   private button: JSX.Element;
   private buttonContent: string;
   private onClick: Function | false;
 
-  public constructor(
-    type: "previous" | "next",
-    switchingPageId: number | string,
-    onClick?: Function
-  ) {
+  public constructor(type: "previous" | "next", switchingPageId: string, onClick?: Function) {
     this.type = type;
     this.button = <div></div>;
     this.onClick = onClick || false;
 
+    let prefix = switchingPageId.split("_")[0];
+    let suffix = switchingPageId.split("_")[1];
+
     if (type === "previous") {
       this.buttonContent = "Previous";
-      this.switchingPageId = Number(switchingPageId) - 1;
+      this.switchingPageId = String(Number(prefix)-1) + "_" + suffix;
     } else {
       this.buttonContent = "Next";
-      this.switchingPageId = Number(switchingPageId) + 1;
+      this.switchingPageId = String(Number(prefix)+1) + "_" + suffix;
     }
   }
 

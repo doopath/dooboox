@@ -3,7 +3,7 @@ import { Page } from "./Page";
 
 export class ContentPage extends Page {
   public constructor(props: object) {
-    super({ ...props, type: "contentPage" });
+    super({ ...props, type: "themes" });
   }
 
   public componentDidMount = (): void => {

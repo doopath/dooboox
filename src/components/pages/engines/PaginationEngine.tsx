@@ -20,13 +20,15 @@ export class PaginationEngine implements Engine {
   };
 
   public create = (): void => {
-    let pageId: number | string = this.props["pageId"];
+    let pageId: string = this.props["pageId"];
     let nextPage: boolean = this.props["nextPage"];
-
     let previous, next;
 
-    if (typeof pageId !== "string") {
-      if (!(Number(pageId) < 2)) {
+    // Some pages (for example: home page named as 1_Home, 2_Home, etc).
+    let numberId: number = Number(pageId.split("_")[0]);
+
+    if (typeof numberId === "number") {
+      if (numberId >= 2) {
         previous = new PaginationButtonEngine("previous", pageId, this.setPage);
         previous.create();
         previous = previous.getElement();

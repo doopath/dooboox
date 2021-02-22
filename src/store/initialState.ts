@@ -21,7 +21,7 @@ const initialState: object = {
     themes: [],
 
     currentPage: [],
-    currentPageId: 1,
+    currentPageId: "1_HomePage",
     nextPage: false,
     pageSearcherValue: "",
     texts: {},
@@ -29,7 +29,7 @@ const initialState: object = {
 
     location: {
       home: "dooboox/",
-      content: "dooboox/content",
+      content: "dooboox/themes",
       authors: "dooboox/authors",
       about: "dooboox/about",
     },
@@ -39,12 +39,8 @@ const initialState: object = {
     },
 
     api: {
-      getPageUrl(type: string, id?: number): string {
-        if (id) {
-          return `https://doopath.github.io/dooboox_api/pages/${type}/page-${id}/index.json`;
-        } else {
-          return `https://doopath.github.io/dooboox_api/pages/${type}/index.json`;
-        }
+      getPageUrl(type: string, id: number | false): string {
+        return `https://doopath.github.io/dooboox_api/pages/${type}/` + ((id === false) ? "index.json" : `${id}/index.json`);
       },
     },
 

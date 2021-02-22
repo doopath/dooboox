@@ -7,7 +7,7 @@ export class Default extends Page {
   private nameHighlighter;
 
   public constructor(props: object) {
-    super({ ...props, type: "authorsPage" });
+    super({ ...props, type: "authors" });
 
     this.nameHighlighter = props["nameHighlighter"];
   }

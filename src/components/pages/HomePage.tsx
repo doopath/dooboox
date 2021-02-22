@@ -4,13 +4,13 @@ import { Preloader } from "../Preloader";
 
 export class HomePage extends Page {
   public constructor(props: object) {
-    super({ ...props, type: "homePage" });
+    super({ ...props, type: "home" });
   }
 
   public componentDidMount = (): void => {
     try {
       this.turnOnPreloader();
-      this.getInitialPage(1);
+      this.getInitialPage("1_HomePage");
       this.turnOffPreloader();
     } catch (e) {
       this.props["logger"].log(e);
@@ -21,7 +21,7 @@ export class HomePage extends Page {
     return (
       <div>
         <div className="main-container">
-          <span className="tp-page-id">Page id: {this.props["currentPageId"]}</span>
+          <span className="tp-page-id">Page id: {this.props["currentPageId"].split("_")[0]}</span>
           <div className="main-item">
             <Preloader
               {...{

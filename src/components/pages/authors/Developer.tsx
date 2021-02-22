@@ -5,7 +5,7 @@ export class Developer extends Page {
   private nonePage: string;
 
   public constructor(props: object) {
-    super({ ...props, type: "authorsPage/author-1" });
+    super({ ...props, type: "authorsPage/author-1", exclude: true });
     this.nonePage = props["nonePage"];
   }
 

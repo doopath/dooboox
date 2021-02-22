@@ -13,7 +13,7 @@ export class Page extends PageEngine {
     this.props["actionCreator"]("SET_PRELOADER_MODE", "DISABLED");
   };
 
-  protected getInitialPage = (id?: number) => {
+  protected getInitialPage = (id?: string) => {
     this.setPage(id);
   };
 }
