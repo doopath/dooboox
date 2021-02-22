@@ -59,7 +59,7 @@ export class Header extends Component {
       <header className={"header"}>
         <div className={"header-container"}>
           <p className={"header-title"}>
-            <a href="/">Dooboox</a>
+            <a href={"/" + this.props["homeLink"]}>Dooboox</a>
           </p>
           <div className={this.getSearcherClassList(this.props["searcherMode"])}>
             <input

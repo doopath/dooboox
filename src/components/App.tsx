@@ -16,6 +16,7 @@ export class App extends Component {
           actionCreator={this.props["actionCreator"]}
           mobileScreenWidth={this.props["root"]["mobileScreenWidth"]}
           getUniqueKey={this.props["root"]["getUniqueKey"]}
+          homeLink={this.props["root"]["location"]["home"]}
         />
         <Main {...this.props} />
         <Footer />

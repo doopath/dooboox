@@ -1,7 +1,7 @@
 import { Searcher } from "../components/modules/ContentSearch";
 
 import fish from "./../img/fish.jpeg";
-import nonePage from "./../img/nonePage.png";
+import nonePage from "./../img/nonePage.png"
 import { syntaxHighlight } from "../components/modules/SyntaxHighlight";
 
 export type action = {

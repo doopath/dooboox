@@ -1,6 +1,6 @@
-import { PageEngine } from "./Engines/PageEngine";
+import { PageEngine } from "./engines/PageEngine";
 
-export abstract class Page extends PageEngine {
+export class Page extends PageEngine {
   public constructor(props: object) {
     super({ ...props });
   }

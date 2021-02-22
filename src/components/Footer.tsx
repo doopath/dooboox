@@ -36,7 +36,7 @@ export class Footer extends Component {
 
           <div className="footer-item">
             <ul className="footer-menu-list">
-              <p className="footer-menu-title">ТЕМЫ</p>
+              <p className="footer-menu-title">THEMES</p>
               <li className="footer-menu-item">
                 <a href="/" className="footer-menu-link">
                   DEFINITION
