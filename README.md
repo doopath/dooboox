@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Doopath project named Dooboox
 
 ## Based on the [ptototype](http://sha1om.github.io/myproject)
@@ -10,7 +9,6 @@ Built version located [here](http://sha1om.github.io/dooboox/) or if you want to
 Master branch repository located on [this page](https://github.com/sha1om/dooboox/tree/master)
 
 [Here](https://github.com/sha1om/dooboox/tree/develop) you can see the develop branch of the project.
-=======
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -81,4 +79,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
->>>>>>> 1a3c38839ecf7441e5d119eeea16db0d34043636
+
