@@ -3,17 +3,29 @@
   "name": "Create React App Sample",
   "icons": [
     {
+<<<<<<< HEAD
       "src": "https://sha1om.github.io/dooboox_api/images/logo.png",
+=======
+      "src": "favicon.ico",
+>>>>>>> 1a3c38839ecf7441e5d119eeea16db0d34043636
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
+<<<<<<< HEAD
       "src": "https://sha1om.github.io/dooboox_api/images/logo.png",
+=======
+      "src": "logo192.png",
+>>>>>>> 1a3c38839ecf7441e5d119eeea16db0d34043636
       "type": "image/png",
       "sizes": "192x192"
     },
     {
+<<<<<<< HEAD
       "src": "https://sha1om.github.io/dooboox_api/images/logo.png",
+=======
+      "src": "logo512.png",
+>>>>>>> 1a3c38839ecf7441e5d119eeea16db0d34043636
       "type": "image/png",
       "sizes": "512x512"
     }
