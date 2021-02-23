@@ -1,40 +1,40 @@
-import axios from "axios";
-import { Component } from "react";
+import axios from 'axios'
+import { Component } from 'react'
 
-import { cacher } from "../modules/Cacher";
+import { cacher } from '../modules/Cacher'
 
 export class AbstractPage extends Component {
-  public props: object;
-  private type: string;
-  private excludeName: boolean;
+  public props: object
+  private type: string
+  private excludeName: boolean
 
   public constructor(props: object) {
-    super(props);
-    this.props = props;
-    this.excludeName = props["exclude"] || false;
-    this.type = props["type"] + (this.excludeName ? "" : "Page");
+    super(props)
+    this.props = props
+    this.excludeName = props['exclude'] || false
+    this.type = props['type'] + (this.excludeName ? '' : 'Page')
   }
 
   private setCachedPage = (pageId?: string): boolean => {
-    let id: string = String(pageId || this.type);
+    let id: string = String(pageId || this.type)
 
     if (cacher.checkElement(id)) {
-      this.props["actionCreator"]("SET_CURRENT_PAGE", cacher.getValue(id));
-      return true;
+      this.props['actionCreator']('SET_CURRENT_PAGE', cacher.getValue(id))
+      return true
     } else {
-      return false;
+      return false
     }
   }
 
   private setFetchedPage = (pageId?: string): void => {
-    axios["get"](this.props["api"].getPageUrl(this.type, pageId || false)).then(
+    axios['get'](this.props['api'].getPageUrl(this.type, pageId || false)).then(
       (response: object) => {
-        if (response["data"]) {
-          cacher.save(response["data"][0]["id"], response["data"][0]);
-          this.props["actionCreator"]("SET_CURRENT_PAGE", response["data"][0]);
+        if (response['data']) {
+          cacher.save(response['data'][0]['id'], response['data'][0])
+          this.props['actionCreator']('SET_CURRENT_PAGE', response['data'][0])
         }
       }
-    );
+    )
   }
 
   protected setPage = (pageId?: string): void => {
@@ -43,11 +43,11 @@ export class AbstractPage extends Component {
      */
 
     if (!this.setCachedPage(pageId)) {
-      this.setFetchedPage(pageId);
+      this.setFetchedPage(pageId)
     }
-  };
+  }
 
-  protected setPageSearcherValue = (newValue: number | ""): void => {
-    this.props["actionCreator"]("SET_PAGE_SEARCHER_VALUE", newValue);
-  };
+  protected setPageSearcherValue = (newValue: number | ''): void => {
+    this.props['actionCreator']('SET_PAGE_SEARCHER_VALUE', newValue)
+  }
 }
