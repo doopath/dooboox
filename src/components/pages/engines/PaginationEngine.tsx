@@ -4,7 +4,7 @@ import { PaginationButtonEngine } from "./PaginationButtonEngine";
 
 export class PaginationEngine implements Engine {
   private props: object;
-  private setPage: (pageId?: number) => void;
+  private setPage: (pageId?: string) => void;
   private setPageSearcherValue: (newValue: number | "") => void;
   private pagination: JSX.Element;
 
@@ -56,7 +56,10 @@ export class PaginationEngine implements Engine {
           <div
             key={this.props["getUniqueKey"]()}
             className="tp-page-searcher_button"
-            onClick={(): void => this.setPage(this.props["pageSearcherValue"])}
+            onClick={(): void => {
+              let target: string = this.props["pageSearcherValue"] + "_" + this.props["currentPageId"].split("_")[1];
+              this.setPage(target);
+            }}
           >
             <a href="#" key={this.props["getUniqueKey"]()}>
               <span>Search</span>
