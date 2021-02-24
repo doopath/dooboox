@@ -9,11 +9,18 @@
   right: 0;
   padding: 10px 10px 10px 10px;
   flex-direction: column-reverse;
-  z-index: 100;
+  z-index: 3;
 }
 
 .tp-notification {
   position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 820px) {
+  .tp-notifications-block {
+    display: none;
+  }
 }
 
 /* end of NotificationsBlock styles */
