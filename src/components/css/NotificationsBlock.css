@@ -1,0 +1,19 @@
+/* NotificationsBlock styles */
+
+.tp-notifications-block {
+  display: flex;
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 10px 10px 10px 10px;
+  flex-direction: column-reverse;
+  z-index: 100;
+}
+
+.tp-notification {
+  position: relative;
+}
+
+/* end of NotificationsBlock styles */

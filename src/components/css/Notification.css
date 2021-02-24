@@ -1,0 +1,69 @@
+/* Notification sytles */
+
+.tp-notification {
+  display: block;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 300px;
+  height: 80px;
+  background: #2E3440;
+  color: #E5E9F0;
+  z-index: 10;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 12px;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px #8FBCBB;
+  animation: notification 10s ease forwards;
+}
+
+.tp-notification__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #434C5E;
+  height: 7px;
+  width: 100%;
+}
+
+.tp-notification__timeout-line {
+  background: #8FBCBB;
+  height: 7px;
+  animation: notification-timeline 9s linear forwards;
+}
+
+.tp-notification__body {
+  position: absolute;
+  top: 10px;
+}
+
+@keyframes notification {
+  0% {
+    right: 20px;
+    opacity: 1;
+  }
+
+  90% {
+    right: 20px;
+    opacity: 1;
+  }
+
+  100% {
+    right: -330px;
+    opacity: 0;
+  }
+}
+
+@keyframes notification-timeline {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+/* End of notification styles */

@@ -1,16 +1,17 @@
-import { Searcher } from "../components/modules/ContentSearch";
+import { Searcher } from "../components/modules/ContentSearch"
+import React from "react"
 
-import fish from "./../img/fish.jpeg";
+import fish from "./../img/fish.jpeg"
 import nonePage from "./../img/nonePage.png"
-import { syntaxHighlight } from "../components/modules/SyntaxHighlight";
+import { syntaxHighlight } from "../components/modules/SyntaxHighlight"
 
 export type action = {
-  type: string;
-  payload: any;
-};
+  type: string
+  payload: any
+}
 
 export interface Reducer {
-  reduce(state: object, action: action): object;
+  reduce(state: object, action: action): object
 }
 
 const initialState: object = {
@@ -26,6 +27,7 @@ const initialState: object = {
     pageSearcherValue: "",
     texts: {},
     authors: {},
+    notifications: {},
 
     location: {
       home: "dooboox/",
@@ -35,12 +37,15 @@ const initialState: object = {
     },
 
     getUniqueKey(): number {
-      return 1 + Math.round(Math.random() * 10000);
+      return 1 + Math.round(Math.random() * 10000)
     },
 
     api: {
       getPageUrl(type: string, id: number | false): string {
-        return `https://doopath.github.io/dooboox_api/pages/${type}/` + ((id === false) ? "index.json" : `${id}/index.json`);
+        return (
+          `https://doopath.github.io/dooboox_api/pages/${type}/` +
+          (id === false ? "index.json" : `${id}/index.json`)
+        )
       },
     },
 
@@ -48,7 +53,8 @@ const initialState: object = {
       fish,
       nonePage,
       preloader: "https://doopath.github.io/dooboox_api/images/preloader.gif",
-      logo: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      logo:
+        "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
     },
 
     minimap: {
@@ -58,7 +64,7 @@ const initialState: object = {
 
     syntaxHighlight: {
       highlight: (codeLine: string): string => {
-        return new syntaxHighlight(codeLine).highlight();
+        return new syntaxHighlight(codeLine).highlight()
       },
     },
   },
@@ -76,7 +82,7 @@ const initialState: object = {
     ],
 
     search(expression: string, elements: Array<string>, fast: boolean = false) {
-      return new Searcher(expression, elements).search(fast);
+      return new Searcher(expression, elements).search(fast)
     },
   },
   menu: {
@@ -84,11 +90,13 @@ const initialState: object = {
     mobileScreenWidth: 590,
 
     getMenuMode(): string {
-      return document.body.clientWidth <= this.mobileScreenWidth ? "COMPACT" : "FULLSIZE";
+      return document.body.clientWidth <= this.mobileScreenWidth
+        ? "COMPACT"
+        : "FULLSIZE"
     },
   },
-};
+}
 
-export const rootInitialState: object = initialState["root"];
-export const searchInitialState: object = initialState["search"];
-export const menuInitialState: object = initialState["menu"];
+export const rootInitialState: object = initialState["root"]
+export const searchInitialState: object = initialState["search"]
+export const menuInitialState: object = initialState["menu"]
