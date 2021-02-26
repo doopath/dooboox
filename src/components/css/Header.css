@@ -9,6 +9,7 @@
   grid-template: 1fr / 75%;
   position: relative;
   font-family: "Roboto Mono";
+  z-index: 10;
 }
 
 .header-container {
@@ -97,9 +98,11 @@
     grid-template: 1fr / 1fr;
     padding: 0 20px;
   }
+
   .header-title {
     line-height: 60px;
   }
+
   .header-searcher {
     width: 34px;
     height: 34px;
@@ -107,13 +110,16 @@
     background: #e5e9f0;
     transition: 0.2s linear;
   }
+
   .header-searcher:hover {
     box-shadow: 0 0 5px 1px #e5e9f0;
   }
+
   #search {
     transform: translate(100%, 0);
     display: none;
   }
+
   .search-icon {
     width: 34px;
     height: 34px;

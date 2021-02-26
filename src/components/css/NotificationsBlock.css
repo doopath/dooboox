@@ -1,15 +1,19 @@
 /* NotificationsBlock styles */
 
 .tp-notifications-block {
-  display: flex;
+  display: grid;
   position: fixed;
   width: 320px;
   height: 100%;
   top: 0;
   right: 0;
-  padding: 10px 10px 10px 10px;
-  flex-direction: column-reverse;
-  z-index: 3;
+  padding: 10px 5px 10px 10px;
+  grid-template-rows: auto;
+  justify-items: end;
+  justify-content: end;
+  align-items: end;
+  align-content: end;
+  z-index: 9;
 }
 
 .tp-notification {

@@ -14,7 +14,7 @@ export class PaginationEngine implements Engine {
   private type: string
 
   public constructor(props: object) {
-    this.props = { ...props }
+    this.props = props
     this.pagination = <></>
     this.type = props["type"]
     this.setPage = props["setPage"]
@@ -54,22 +54,22 @@ export class PaginationEngine implements Engine {
       "_" +
       this.props["currentPageId"].split("_")[1]
 
-    this.searchPage(target).then((result: boolean) => {
-      if (result) {
-        this.setPage(target)
-        let message = `Switched to the page with id=${this.props["pageSearcherValue"]}`
-        this.props["actionCreator"]("ADD_NEW_NOTIFICATION", {
-          id: this.props["getUniqueKey"](),
-          notification: <Notification {...{ ...this.props, message }} />,
-        })
-      } else {
-        let message = `Page with id=${this.props["pageSearcherValue"]} does not exists!`
-        this.props["actionCreator"]("ADD_NEW_NOTIFICATION", {
-          id: this.props["getUniqueKey"](),
-          notification: <Notification {...{ ...this.props, message }} />,
-        })
-      }
-    })
+    let message: string
+    let id: string
+    let actionCreator: Function = this.props["actionCreator"]
+
+    let result = await this.searchPage(target)
+
+    if (result) {
+      this.setPage(target)
+      message = `Switched to the page with id=${this.props["pageSearcherValue"]}`
+    } else {
+      message = `Page with id=${this.props["pageSearcherValue"]} does not exists!`
+    }
+
+    id = String(this.props["getUniqueKey"]())
+    let notification = <Notification {...{ actionCreator, message, id }} />
+    this.props["actionCreator"]("ADD_NEW_NOTIFICATION", { id, notification })
   }
 
   public create = (): void => {

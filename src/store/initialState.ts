@@ -37,7 +37,7 @@ const initialState: object = {
     },
 
     getUniqueKey(): number {
-      return 1 + Math.round(Math.random() * 10000)
+      return 1 + Math.round(Math.random() * 1000000)
     },
 
     api: {

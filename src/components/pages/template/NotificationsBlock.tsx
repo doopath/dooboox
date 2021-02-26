@@ -1,12 +1,9 @@
 import React from "react"
 import { Component } from "react"
-import { JsxEmit } from "typescript"
 
 import "../../css/NotificationsBlock.css"
 
 export class NotificationsBlock extends Component {
-  private notifications = []
-
   public constructor(props: object) {
     super(props)
   }
@@ -14,6 +11,11 @@ export class NotificationsBlock extends Component {
   public render = (): JSX.Element => {
     return (
       <div className="tp-notifications-block">
+        {console.log(
+          `\nCurrent notifications: ${Object.keys(
+            this.props["notifications"]
+          )}\n`
+        )}
         {Object.values(this.props["notifications"])}
       </div>
     )

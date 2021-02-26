@@ -3,13 +3,13 @@
 .tp-notification {
   display: block;
   position: fixed;
-  right: 20px;
+  right: 5px;
   bottom: 20px;
-  width: 300px;
+  width: 200px;
   height: 80px;
   background: #2E3440;
   color: #E5E9F0;
-  z-index: 10;
+  z-index: 15;
   border-radius: 5px;
   padding: 10px;
   margin-top: 20px;
