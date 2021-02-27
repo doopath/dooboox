@@ -1,7 +1,7 @@
 {
   "main.css": "/dooboox/static/css/main.fb244f75.chunk.css",
-  "main.js": "/dooboox/static/js/main.c7491443.chunk.js",
-  "main.js.map": "/dooboox/static/js/main.c7491443.chunk.js.map",
+  "main.js": "/dooboox/static/js/main.826d725a.chunk.js",
+  "main.js.map": "/dooboox/static/js/main.826d725a.chunk.js.map",
   "runtime~main.js": "/dooboox/static/js/runtime~main.62cb30e2.js",
   "runtime~main.js.map": "/dooboox/static/js/runtime~main.62cb30e2.js.map",
   "static/css/2.20cad54e.chunk.css": "/dooboox/static/css/2.20cad54e.chunk.css",
@@ -10,7 +10,7 @@
   "static/js/3.1dc5a514.chunk.js": "/dooboox/static/js/3.1dc5a514.chunk.js",
   "static/js/3.1dc5a514.chunk.js.map": "/dooboox/static/js/3.1dc5a514.chunk.js.map",
   "index.html": "/dooboox/index.html",
-  "precache-manifest.31530542d2b2b2b2086266490ad8cba6.js": "/dooboox/precache-manifest.31530542d2b2b2b2086266490ad8cba6.js",
+  "precache-manifest.d3db25cdc6832008c6b1bf963cd42fc6.js": "/dooboox/precache-manifest.d3db25cdc6832008c6b1bf963cd42fc6.js",
   "service-worker.js": "/dooboox/service-worker.js",
   "static/css/2.20cad54e.chunk.css.map": "/dooboox/static/css/2.20cad54e.chunk.css.map",
   "static/css/main.fb244f75.chunk.css.map": "/dooboox/static/css/main.fb244f75.chunk.css.map",
