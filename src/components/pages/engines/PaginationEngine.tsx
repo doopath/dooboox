@@ -53,11 +53,7 @@ export class PaginationEngine implements Engine {
       this.props["pageSearcherValue"] +
       "_" +
       this.props["currentPageId"].split("_")[1]
-
     let message: string
-    let id: string
-    let actionCreator: Function = this.props["actionCreator"]
-
     let result = await this.searchPage(target)
 
     if (result) {
@@ -67,9 +63,8 @@ export class PaginationEngine implements Engine {
       message = `Page with id=${this.props["pageSearcherValue"]} does not exists!`
     }
 
-    id = String(this.props["getUniqueKey"]())
-    let notification = <Notification {...{ actionCreator, message, id }} />
-    this.props["actionCreator"]("ADD_NEW_NOTIFICATION", { id, notification })
+    let notification = new Notification({message})
+    this.props["actionCreator"]("ADD_NEW_NOTIFICATION", notification)
   }
 
   public create = (): void => {

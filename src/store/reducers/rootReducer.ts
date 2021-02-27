@@ -28,26 +28,11 @@ class RootReducer implements Reducer {
 
   private addNewNotification = (
     notifications: Notification[],
-    payload: object
-  ): object => {
-    if (notifications[payload["id"]] !== undefined) {
-      throw new Error(`A notification with id=${payload["id"]} already exists!`)
-    }
-    let newNotifications = { ...notifications }
-    newNotifications[payload["id"]] = payload["notification"]
-    return newNotifications
-  }
-
-  private removeNotification = (
-    notifications: Notification[],
-    id: string
+    payload: Notification
   ): Notification[] => {
-    if (notifications[id] === undefined) {
-      throw new Error(`Notification with id=${id} does not exists!`)
-    }
-    let newNotifications = { ...notifications }
-    delete newNotifications[id]
-    return newNotifications
+    notifications = notifications.filter((item: Notification) => !item.isHidden)
+    notifications.push(payload)
+    return notifications
   }
 
   public reduce = (
@@ -83,12 +68,6 @@ class RootReducer implements Reducer {
       return { ...state, authors: { ...newAuthors } }
     } else if (action.type === "ADD_NEW_NOTIFICATION") {
       let notifications = this.addNewNotification(
-        state["notifications"],
-        action.payload
-      )
-      return { ...state, notifications }
-    } else if (action.type === "REMOVE_NOTIFICATION") {
-      let notifications = this.removeNotification(
         state["notifications"],
         action.payload
       )

@@ -27,7 +27,7 @@ const initialState: object = {
     pageSearcherValue: "",
     texts: {},
     authors: {},
-    notifications: {},
+    notifications: [],
 
     location: {
       home: "dooboox/",

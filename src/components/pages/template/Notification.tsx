@@ -4,15 +4,18 @@ import { Component } from "react"
 import "../../css/Notification.css"
 
 export class Notification extends Component {
+  public isHidden: boolean
+  private timeout: number
+
   public constructor(props: object) {
     super(props)
-    console.log(`Current id - ${props["id"]} (In the constructor)`)
+    this.isHidden = false
+    this.timeout = props["timeout"] || 10
   }
 
   private waitTimeout = async (): Promise<void> => {
-    await new Promise((resolve: Function) => setTimeout(resolve, 10000))
-    await this.props["actionCreator"]("REMOVE_NOTIFICATION", this.props["id"])
-    console.log("REMOVED\n")
+    await new Promise((resolve: Function) => setTimeout(resolve, this.timeout*1000))
+    this.isHidden = true
   }
 
   public componentDidMount = (): void => {

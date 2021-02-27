@@ -1,7 +1,6 @@
 import React from "react"
 import { Page } from "./Page"
 import { Preloader } from "../Preloader"
-import { Notification } from "./template/Notification"
 
 export class HomePage extends Page {
   public constructor(props: object) {
