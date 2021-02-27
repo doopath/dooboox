@@ -25,10 +25,7 @@ export class PaginationEngine implements Engine {
     return this.pagination
   }
 
-  private checkPage = async (
-    modify: Function,
-    pageId?: string
-  ): Promise<void> => {
+  private checkPage = async (modify: Function, pageId?: string): Promise<void> => {
     await axios["get"](this.props["api"].getPageUrl(this.type, pageId || false))
       .then((response: object) => {
         if (response["data"]) {
@@ -37,24 +34,20 @@ export class PaginationEngine implements Engine {
         }
       })
       .catch(() => {})
-    return
   }
 
   private searchPage = async (targetId: string): Promise<boolean> => {
     let pageExists: boolean | undefined = undefined
-
     await this.checkPage((state: boolean) => (pageExists = state), targetId)
 
     return pageExists || false
   }
 
   private setSearchingPage = async (): Promise<void> => {
-    let target: string =
-      this.props["pageSearcherValue"] +
-      "_" +
-      this.props["currentPageId"].split("_")[1]
-    let message: string
-    let result = await this.searchPage(target)
+    let target: string = this.props["pageSearcherValue"] + "_" +
+      this.props["currentPageId"].split("_")[1],
+      message: string,
+      result = await this.searchPage(target)
 
     if (result) {
       this.setPage(target)
@@ -63,17 +56,14 @@ export class PaginationEngine implements Engine {
       message = `Page with id=${this.props["pageSearcherValue"]} does not exists!`
     }
 
-    let notification = new Notification({message})
-    this.props["actionCreator"]("ADD_NEW_NOTIFICATION", notification)
+    this.props["actionCreator"]("ADD_NEW_NOTIFICATION", new Notification({message}))
   }
 
   public create = (): void => {
-    let pageId: string = this.props["pageId"]
-    let nextPage: boolean = this.props["nextPage"]
-    let previous, next
-
-    // Some pages (for example: home page named as 1_Home, 2_Home, etc).
-    let numberId: number = Number(pageId.split("_")[0])
+    let pageId: string = this.props["pageId"],
+      nextPage: boolean = this.props["nextPage"],
+      previous, next,
+      numberId: number = Number(pageId.split("_")[0]) // Take '1' from '1_PageName'
 
     if (typeof numberId === "number") {
       if (numberId >= 2) {

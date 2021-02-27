@@ -9,13 +9,8 @@ export class HomePage extends Page {
   }
 
   public componentDidMount = (): void => {
-    try {
-      this.turnOnPreloader()
-      this.getInitialPage("1_HomePage")
-      this.turnOffPreloader()
-    } catch (e) {
-      this.props["logger"].log(e)
-    }
+    this.getInitialPage("1_HomePage")
+    this.turnOffPreloader()
   }
 
   public render = (): JSX.Element => {

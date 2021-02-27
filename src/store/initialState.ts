@@ -18,9 +18,8 @@ const initialState: object = {
   root: {
     bodyScrollState: "UNLOCKED",
     mobileScreenWidth: 590,
-    preloaderMode: "DISABLED",
+    preloaderMode: "LOADING",
     themes: [],
-
     currentPage: [],
     currentPageId: "1_HomePage",
     nextPage: false,

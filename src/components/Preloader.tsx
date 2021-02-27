@@ -1,11 +1,18 @@
 import React, { Component } from "react";
 
 export class Preloader extends Component {
+  private image: string
+
+  public constructor(props: object) {
+    super(props)
+    this.image = props["preloader"]
+  }
+
   private getPreloaderDisplay = (): "none" | "grid" => {
     if (this.props["mode"] === "LOADING") {
-      return "grid";
+      return "grid"
     } else {
-      return "none";
+      return "none"
     }
   };
 
@@ -13,12 +20,10 @@ export class Preloader extends Component {
     return (
       <div
         className="preloader"
-        style={{
-          display: this.getPreloaderDisplay(),
-        }}
+        style={{ display: this.getPreloaderDisplay() }}
       >
         <img
-          src={this.props["preloader"]}
+          src={this.image}
           alt="no animation"
           className="preloader-gif"
           id="preloaderGif"
