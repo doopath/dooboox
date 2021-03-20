@@ -14,9 +14,7 @@ class RootReducer implements Reducer {
     return newTexts
   }
 
-  private switchBodyScroll = (
-    payload: "LOCK" | "UNLOCK"
-  ): "LOCKED" | "UNLOCKED" => {
+  private switchBodyScroll = (payload: "LOCK" | "UNLOCK"): "LOCKED" | "UNLOCKED" => {
     if (payload === "LOCK") {
       document.getElementsByTagName("body")[0].classList.add("scroll-lock")
       return "LOCKED"
@@ -26,19 +24,15 @@ class RootReducer implements Reducer {
     }
   }
 
-  private addNewNotification = (
-    notifications: Notification[],
-    payload: Notification
-  ): Notification[] => {
+  private addNewNotification = (notifications: Notification[], payload: Notification): Notification[] => {
     notifications = notifications.filter((item: Notification) => !item.isHidden)
+    if (notifications.length >= 10) notifications = []
     notifications.push(payload)
+
     return notifications
   }
 
-  public reduce = (
-    state: object = this.initialState,
-    action: action
-  ): object => {
+  public reduce = (state: object = this.initialState, action: action): object => {
     if (action.type === "SWITCH_BODY_SCROLL") {
       return {
         ...state,

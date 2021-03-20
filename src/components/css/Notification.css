@@ -16,7 +16,7 @@
   font-size: 12px;
   overflow: hidden;
   box-shadow: 0px 0px 0px 2px #8FBCBB;
-  animation: notification 10s ease forwards;
+  animation: notification ease forwards;
 }
 
 .tp-notification__header {
@@ -31,7 +31,7 @@
 .tp-notification__timeout-line {
   background: #8FBCBB;
   height: 7px;
-  animation: notification-timeline 9s linear forwards;
+  animation: notification-timeline linear forwards;
 }
 
 .tp-notification__body {

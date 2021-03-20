@@ -29,10 +29,7 @@ class ElementCreator {
     )
   }
 
-  public createCodeBlock = (
-    items: [[string]],
-    highlighter: syntaxHighlight
-  ): JSX.Element => {
+  public createCodeBlock = (items: [[string]], highlighter: syntaxHighlight): JSX.Element => {
     return (
       <CodeBlock
         lines={[...items["codeLines"]]}
