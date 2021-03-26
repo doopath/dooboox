@@ -108,9 +108,10 @@ export class PageEngine extends AbstractPage implements Engine {
     } else if (pageElement["name"] === "links") {
       return this.elementCreator.createLinksBlock(pageElement["items"])
     } else if (pageElement["name"] === "text") {
-      if (Object.keys(this.props["texts"]).length === 0) {
+      if (Object.keys(this.props["texts"]).length === 0 || !Object.keys(this.props["texts"]).includes(pageElement["id"])) {
         this.addNewText(pageElement["source"], pageElement["id"])
       }
+
       return this.elementCreator.createText(
         this.props["texts"],
         pageElement["id"]
