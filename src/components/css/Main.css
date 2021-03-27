@@ -417,6 +417,7 @@ mark {
   position: relative;
   display: inline-block;
   margin-left: 10px;
+  cursor: default;
 }
 
 .tp-themes-arrow {
@@ -454,11 +455,13 @@ mark {
 .tp-themes-subitem {
   position: relative;
   padding-left: 5px;
+  cursor: default;
 }
 
 .tp-themes-sublink {
   position: relative;
   display: inline-block;
+  cursor: default;
 }
 
 .tp-themes-subitem::before {
@@ -470,7 +473,12 @@ mark {
   left: -20px;
 }
 
-.tp-themes-sublink:hover,
+/* The old and could I say bad feature that was a mistake by my youth... */
+/* It's disabled because I wanted to make a summary with links at articles or titles, but... */
+/* I'm too lazy to do it :> */
+/* I made some css effect for themes items, but because home pages loads one per one by next button */
+/* that cannot work good. */
+/* .tp-themes-sublink:hover,
 .tp-themes-link:hover {
   padding-left: 20px;
   transition: 0.2s linear;
@@ -484,6 +492,7 @@ mark {
 .tp-themes-link:hover::before {
   left: 0px;
 }
+*/
 
 .tp-themes-sublist::before,
 .tp-themes-subitem::before,
