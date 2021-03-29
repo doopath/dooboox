@@ -18,7 +18,7 @@ mark {
 .main-container {
   width: 100%;
   height: auto;
-  min-height: 500px;
+  min-height: 200px;
   padding: 10px;
   border-radius: 3px;
   background: #434c5e;

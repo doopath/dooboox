@@ -94,46 +94,42 @@ export class PageEngine extends AbstractPage implements Engine {
   }
 
   private createElement = (pageElement: object): JSX.Element => {
-    if (pageElement["name"] === "title") {
-      return this.elementCreator.createTitle(pageElement["value"])
-    } else if (pageElement["name"] === "imageBlock") {
-      return this.elementCreator.createImageBlock(pageElement["items"])
-    } else if (pageElement["name"] === "codeBox") {
-      return this.elementCreator.createCodeBlock(
+    switch (pageElement["name"]) {
+      case "title": return this.elementCreator.createTitle(pageElement["value"])
+      case "imageBlock": return this.elementCreator.createImageBlock(pageElement["items"])
+      case "codeBox": return this.elementCreator.createCodeBlock(
         pageElement["items"],
         this.props["syntaxHighlight"]
       )
-    } else if (pageElement["name"] === "themes") {
-      return this.elementCreator.createThemesBlock(pageElement["items"])
-    } else if (pageElement["name"] === "links") {
-      return this.elementCreator.createLinksBlock(pageElement["items"])
-    } else if (pageElement["name"] === "text") {
-      if (Object.keys(this.props["texts"]).length === 0 || !Object.keys(this.props["texts"]).includes(pageElement["id"])) {
-        this.addNewText(pageElement["source"], pageElement["id"])
-      }
+      case "themes": return this.elementCreator.createThemesBlock(pageElement["items"])
+      case "links": return this.elementCreator.createLinksBlock(pageElement["items"])
+      case "text": {
+        if (Object.keys(this.props["texts"]).length === 0 || !Object.keys(this.props["texts"]).includes(pageElement["id"])) {
+          this.addNewText(pageElement["source"], pageElement["id"])
+        }
 
-      return this.elementCreator.createText(
-        this.props["texts"],
-        pageElement["id"]
-      )
-    } else if (pageElement["name"] === "authorBlock") {
-      let element: object | undefined = this.props["authors"][pageElement["id"]]
-      if (!element && Object.keys(this.props["authors"]).length === 0) {
-        let authorBlock = new AuthorBlockEngine({
-          author: pageElement,
-          actionCreator: this.props["actionCreator"],
-          location: this.props["location"],
-          nameHighlighter: this.props["nameHighlighter"],
-        })
-        authorBlock.create()
-        return this.elementCreator.createEmptyBlock()
-      } else {
-        return this.elementCreator.createEmptyBlock(element)
+        return this.elementCreator.createText(
+          this.props["texts"],
+          pageElement["id"]
+        )
       }
-    } else {
-      throw new Error(
-        "Page engine got an unknown page element from the server!"
-      )
+      case "authorBlock": {
+        let element: object | undefined = this.props["authors"][pageElement["id"]]
+        if (!element && Object.keys(this.props["authors"]).length === 0) {
+          let authorBlock = new AuthorBlockEngine({
+            author: pageElement,
+            actionCreator: this.props["actionCreator"],
+            location: this.props["location"],
+            nameHighlighter: this.props["nameHighlighter"],
+          })
+          authorBlock.create()
+          return this.elementCreator.createEmptyBlock()
+        } else {
+          return this.elementCreator.createEmptyBlock(element)
+        }
+      }
+      default: throw new Error("Page engine got an unknown page element from the server!")
+
     }
   }
 
