@@ -3,7 +3,7 @@ import React, { Component } from "react";
 // Utils
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export class LinksBlock extends Component {
   constructor(props) {
@@ -21,10 +21,10 @@ export class LinksBlock extends Component {
       );
     } else {
       return (
-        <Link to={props.link} key={props.key} className="tp-link">
+        <NavLink to={props.link} key={props.key} className="tp-link">
           <FontAwesomeIcon icon={faLink} />
           {props.value}
-        </Link>
+        </NavLink>
       );
     }
   };
