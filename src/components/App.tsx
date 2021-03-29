@@ -6,7 +6,6 @@ import { Header } from "./Header";
 import { Main } from "./Main";
 import { Footer } from "./Footer";
 
-// Minimap and index.ts call this
 export class App extends Component {
   render = (): JSX.Element => {
     return (
@@ -19,7 +18,7 @@ export class App extends Component {
           homeLink={this.props["root"]["location"]["home"]}
         />
         <Main {...this.props} />
-        <Footer />
+        <Footer {...this.props["root"]["location"]} />
       </React.StrictMode>
     );
   };

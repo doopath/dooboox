@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
+import React, { Component } from "react"
+import { NavLink } from "react-router-dom"
 
 // CSS Styles
-import "../css/CompactMenu.css";
+import "../css/CompactMenu.css"
 
-type compactMenuMode = "compact-menu_curtain" | "compact-menu_curtain curtain_active";
+type compactMenuMode = "compact-menu_curtain" | "compact-menu_curtain curtain_active"
 
 export class CompactMenu extends Component {
   private toggleMenuMode = (statement: compactMenuMode): void => {
     if (statement === "compact-menu_curtain") {
-      this.props["actionCreator"]("SWITCH_BODY_SCROLL", "LOCK");
-      this.props["actionCreator"]("SWITCH_MENU_MODE", "compact-menu_curtain curtain_active");
+      this.props["actionCreator"]("SWITCH_BODY_SCROLL", "LOCK")
+      this.props["actionCreator"]("SWITCH_MENU_MODE", "compact-menu_curtain curtain_active")
     } else {
-      this.props["actionCreator"]("SWITCH_BODY_SCROLL", "UNLOCK");
-      this.props["actionCreator"]("SWITCH_MENU_MODE", "compact-menu_curtain");
+      this.props["actionCreator"]("SWITCH_BODY_SCROLL", "UNLOCK")
+      this.props["actionCreator"]("SWITCH_MENU_MODE", "compact-menu_curtain")
     }
-  };
+  }
 
   public render = (): JSX.Element => {
     return (
@@ -40,7 +40,7 @@ export class CompactMenu extends Component {
                     to={`/${this.props["root"].location.home}`}
                     className="fas fa-home compact-menu_link"
                   >
-                    MAIN
+                    ГЛАВНАЯ
                   </NavLink>
                 </li>
                 <li className="compact-menu_item">
@@ -48,7 +48,7 @@ export class CompactMenu extends Component {
                     to={`/${this.props["root"].location.content}`}
                     className="fas fa-align-left compact-menu_link"
                   >
-                    SUMMARY
+                    ОГЛАВЛЕНИЕ
                   </NavLink>
                 </li>
                 <li className="compact-menu_item">
@@ -56,7 +56,7 @@ export class CompactMenu extends Component {
                     to={`/${this.props["root"].location.authors}`}
                     className="fas fa-user-astronaut compact-menu_link"
                   >
-                    AUTHORS
+                    АВТОРЫ
                   </NavLink>
                 </li>
                 <li className="compact-menu_item">
@@ -64,7 +64,7 @@ export class CompactMenu extends Component {
                     to={`/${this.props["root"].location.about}`}
                     className="fas fa-project-diagram compact-menu_link"
                   >
-                    ABOUT
+                    О ПРОЕКТЕ
                   </NavLink>
                 </li>
               </ul>
@@ -72,6 +72,6 @@ export class CompactMenu extends Component {
           </div>
         </menu>
       </React.StrictMode>
-    );
-  };
+    )
+  }
 }

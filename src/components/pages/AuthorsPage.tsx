@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
-// Components
 import { Developer } from "./authors/Developer";
 import { Redactor } from "./authors/Redactor";
 import { Writer } from "./authors/Writer";

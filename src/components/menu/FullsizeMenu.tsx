@@ -8,25 +8,25 @@ export class FullsizeMenu extends Component {
         <menu className="menu-list">
           <li className="menu-item">
             <NavLink to={`/${this.props["location"].home}`} className="menu-link">
-              MAIN
+              ГЛАВНАЯ
             </NavLink>
           </li>
 
           <li className="menu-item">
             <NavLink to={`/${this.props["location"].content}`} className="menu-link">
-              SUMMARY
+              ОГЛАВЛЕНИЕ
             </NavLink>
           </li>
 
           <li className="menu-item">
             <NavLink to={`/${this.props["location"].authors}`} className="menu-link">
-              AUTHORS
+              АВТОРЫ
             </NavLink>
           </li>
 
           <li className="menu-item">
             <NavLink to={`/${this.props["location"].about}`} className="menu-link">
-              ABOUT
+              О ПРОЕКТЕ
             </NavLink>
           </li>
         </menu>
