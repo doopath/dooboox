@@ -1,0 +1,22 @@
+{
+  "main.css": "/dooboox/static/css/main.a9b1c156.chunk.css",
+  "main.js": "/dooboox/static/js/main.8abdde47.chunk.js",
+  "main.js.map": "/dooboox/static/js/main.8abdde47.chunk.js.map",
+  "runtime~main.js": "/dooboox/static/js/runtime~main.62cb30e2.js",
+  "runtime~main.js.map": "/dooboox/static/js/runtime~main.62cb30e2.js.map",
+  "static/css/2.06fb70d3.chunk.css": "/dooboox/static/css/2.06fb70d3.chunk.css",
+  "static/js/2.4e202d0e.chunk.js": "/dooboox/static/js/2.4e202d0e.chunk.js",
+  "static/js/2.4e202d0e.chunk.js.map": "/dooboox/static/js/2.4e202d0e.chunk.js.map",
+  "static/js/3.1dc5a514.chunk.js": "/dooboox/static/js/3.1dc5a514.chunk.js",
+  "static/js/3.1dc5a514.chunk.js.map": "/dooboox/static/js/3.1dc5a514.chunk.js.map",
+  "index.html": "/dooboox/index.html",
+  "precache-manifest.55b7f185fb7ec7b1821983188f79e494.js": "/dooboox/precache-manifest.55b7f185fb7ec7b1821983188f79e494.js",
+  "service-worker.js": "/dooboox/service-worker.js",
+  "static/css/2.06fb70d3.chunk.css.map": "/dooboox/static/css/2.06fb70d3.chunk.css.map",
+  "static/css/main.a9b1c156.chunk.css.map": "/dooboox/static/css/main.a9b1c156.chunk.css.map",
+  "static/media/fish.jpeg": "/dooboox/static/media/fish.98206e1c.jpeg",
+  "static/media/nonePage.png": "/dooboox/static/media/nonePage.66bfcb92.png",
+  "static/media/reactLogo.svg": "/dooboox/static/media/reactLogo.9ddec8eb.svg",
+  "static/media/index.css": "/dooboox/static/media/roboto-latin-900italic.ebf6d164.woff2",
+  "static/media/tux.svg": "/dooboox/static/media/tux.6ce63a3a.svg"
+}
