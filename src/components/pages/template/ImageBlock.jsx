@@ -13,7 +13,7 @@ export class ImageBlock extends Component {
   render = () => {
     return (
       <div className="tp-image_block">
-        <img src={this.image} id={this.id} alt="no image" className="tp-image" />
+        <img src={this.image} id={this.id} alt="something went wrong..." className="tp-image" />
         {this.sublinks.length === 0 ? <SublinksBlock sublinks={this.sublinks} /> : <></>}
       </div>
     );

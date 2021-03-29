@@ -1,0 +1,30 @@
+/* NotificationsBlock styles */
+
+.tp-notifications-block {
+  display: grid;
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  padding: 10px 5px 10px 10px;
+  grid-template-rows: auto;
+  justify-items: end;
+  justify-content: end;
+  align-items: end;
+  align-content: end;
+  z-index: 9;
+}
+
+.tp-notification {
+  position: relative;
+  z-index: 100;
+}
+
+@media (max-width: 820px) {
+  .tp-notifications-block {
+    display: none;
+  }
+}
+
+/* end of NotificationsBlock styles */

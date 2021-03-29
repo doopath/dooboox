@@ -1,19 +1,15 @@
-import { PageEngine } from "./Engines/PageEngine";
+import { PageEngine } from "./engines/PageEngine";
 
-export abstract class Page extends PageEngine {
-  public constructor(props: object) {
-    super({ ...props });
+export class Page extends PageEngine {
+  protected turnOnPreloader = () => {
+    this.props["actionCreator"]("SET_PRELOADER_MODE", "LOADING")
   }
 
-  protected turnOnPreloader = () => {
-    this.props["actionCreator"]("SET_PRELOADER_MODE", "LOADING");
-  };
-
   protected turnOffPreloader = () => {
-    this.props["actionCreator"]("SET_PRELOADER_MODE", "DISABLED");
-  };
+    this.props["actionCreator"]("SET_PRELOADER_MODE", "DISABLED")
+  }
 
-  protected getInitialPage = (id?: number) => {
-    this.setPage(id);
-  };
+  protected getInitialPage = (id?: string) => {
+    this.setPage(id)
+  }
 }

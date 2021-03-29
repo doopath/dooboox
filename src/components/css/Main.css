@@ -18,7 +18,7 @@ mark {
 .main-container {
   width: 100%;
   height: auto;
-  min-height: 500px;
+  min-height: 200px;
   padding: 10px;
   border-radius: 3px;
   background: #434c5e;
@@ -417,6 +417,7 @@ mark {
   position: relative;
   display: inline-block;
   margin-left: 10px;
+  cursor: default;
 }
 
 .tp-themes-arrow {
@@ -454,11 +455,13 @@ mark {
 .tp-themes-subitem {
   position: relative;
   padding-left: 5px;
+  cursor: default;
 }
 
 .tp-themes-sublink {
   position: relative;
   display: inline-block;
+  cursor: default;
 }
 
 .tp-themes-subitem::before {
@@ -470,7 +473,12 @@ mark {
   left: -20px;
 }
 
-.tp-themes-sublink:hover,
+/* The old and could I say bad feature that was a mistake by my youth... */
+/* It's disabled because I wanted to make a summary with links at articles or titles, but... */
+/* I'm too lazy to do it :> */
+/* I made some css effect for themes items, but because home pages loads one per one by next button */
+/* that cannot work good. */
+/* .tp-themes-sublink:hover,
 .tp-themes-link:hover {
   padding-left: 20px;
   transition: 0.2s linear;
@@ -484,6 +492,7 @@ mark {
 .tp-themes-link:hover::before {
   left: 0px;
 }
+*/
 
 .tp-themes-sublist::before,
 .tp-themes-subitem::before,
@@ -598,6 +607,7 @@ mark {
   grid-gap: 10px;
   margin: 20px 0;
   padding-right: 15px;
+  z-index: 6;
 }
 
 .tp-pagination_button {
@@ -611,6 +621,7 @@ mark {
   text-align: center;
   transition: 0.2s linear;
   cursor: pointer;
+  z-index: 10;
 }
 
 .tp-pagination_button.next-button {
@@ -657,6 +668,7 @@ mark {
   place-items: center;
   cursor: pointer;
   transition: 0.2s linear;
+  z-index: 10;
 }
 
 .tp-page-searcher_button a {
@@ -699,6 +711,7 @@ mark {
     grid-template: 1fr/ 1fr 6fr 2fr 3fr;
     font-size: 14px;
   }
+
   .tp-code_mode {
     font-size: 15px;
     right: 20px;
@@ -709,6 +722,7 @@ mark {
   .tp-code_state-bar {
     font-size: 12px;
   }
+
   .tp-code_mode {
     font-size: 13px;
   }
@@ -725,28 +739,36 @@ mark {
   .tp-page-id {
     font-size: 12px;
   }
+
   .tp-title {
     font-size: 22px;
   }
+
   .tp-link {
     font-size: 13px;
   }
+
   .tp-sublink {
     font-size: 14px;
   }
+
   .tp-text {
     font-size: 15px;
   }
+
   .tp-code {
     font-size: 14px;
   }
+
   .result-title {
     font-size: 17px;
   }
+
   .tp-code_state-bar {
     font-size: 9px;
     line-height: 22px;
   }
+
   .tp-code_mode {
     font-size: 11px;
   }
@@ -757,18 +779,23 @@ mark {
     font-size: 10px;
     line-height: 22px;
   }
+
   .tp-code {
     font-size: 10px;
   }
+
   .result_list {
     margin-bottom: 30px;
   }
+
   .result-title {
     font-size: 15px;
   }
+
   .tp-code_mode {
     font-size: 11px;
   }
+
   .tp-code_main-info {
     grid-area: mainInfo;
     display: grid;
@@ -776,20 +803,25 @@ mark {
     grid-template: 1fr / 2fr 1fr;
     grid-template-areas: "bufferName extensionName";
   }
+
   .tp-code_buffer-name {
     grid-area: bufferName;
   }
+
   .tp-code_extension-name {
     grid-area: extensionName;
     position: relative;
   }
+
   .tp-code_extension-name span {
     position: absolute;
     right: 35px;
   }
+
   .tp-code_mode {
     grid-area: mode;
   }
+
   .tp-code_bar-type {
     grid-area: barType;
     display: block;
@@ -798,20 +830,25 @@ mark {
     position: relative;
     color: #3b4252;
   }
+
   .tp-code_bar-type span {
     margin: 0 5px 0 -5px;
   }
+
   .tp-code_bar-type svg {
     display: inline-block;
     top: 6px;
     position: absolute;
   }
+
   .tp-code_system-type {
     grid-area: systemType;
   }
+
   .tp-code_buffer-info {
     grid-area: bufferInfo;
   }
+
   .tp-code_state-bar {
     grid-template: repeat(2, 20px) / repeat(4, 1fr);
     grid-template-areas:
@@ -833,6 +870,7 @@ mark {
   .tp-themes-link {
     font-size: 15px;
   }
+
   .tp-themes-sublink {
     font-size: 12px;
     padding-left: 10px;
@@ -843,6 +881,7 @@ mark {
   .tp-code_buffer-bar {
     grid-template-columns: repeat(3, 110px) auto 60px;
   }
+
   .tp-code_buffer {
     font-size: 9px;
   }
@@ -852,9 +891,11 @@ mark {
   .tp-text {
     font-size: 12px;
   }
+
   .tp-themes-link {
     padding-left: 10px;
   }
+
   .tp-themes-link::before {
     left: 0px;
   }
@@ -864,22 +905,27 @@ mark {
   .tp-code_state-bar {
     font-size: 7px;
   }
+
   .tp-code_mode {
     font-size: 8px;
   }
+
   .tp-code_extension-name svg {
     width: 15px;
     height: 15px;
     top: 2px;
   }
+
   .tp-code_system-type img {
     width: 15px;
     height: 15px;
     top: 3px;
   }
+
   .tp-code_bar-type {
     font-size: 6px;
   }
+
   .tp-code_bar-type svg {
     top: 8px;
   }
@@ -889,6 +935,7 @@ mark {
   .tp-code_buffer-bar {
     display: none;
   }
+
   .tp-code_list {
     margin: 0 0 20px 0;
   }
@@ -904,19 +951,23 @@ mark {
   .tp-page-id {
     right: 10px;
   }
+
   .tp-code {
     font-size: 9px;
     line-height: 12px;
   }
+
   .tab,
   .double-tab,
   .triple-tab,
   .monster-tab {
     line-height: 3px;
   }
+
   main {
     padding: 20px 0;
   }
+
   .main-container {
     border-radius: 0;
   }
@@ -929,12 +980,15 @@ mark {
       "mainInfo mainInfo mainInfo mainInfo mainInfo mainInfo mainInfo"
       "mode barType barType bufferInfo bufferInfo systemType systemType";
   }
+
   .tp-code_bar-type {
     grid-column: 2 / 3;
   }
+
   .tp-code_buffer-info {
     grid-column: 3 / 4;
   }
+
   .tp-code_system-type {
     grid-column: 4 / 5;
   }
@@ -951,12 +1005,15 @@ mark {
   .tp-text {
     font-size: 11px;
   }
+
   .tp-themes-sublist {
     margin-top: 5px;
   }
+
   .tp-themes-link {
     font-size: 11px;
   }
+
   .tp-themes-sublink {
     font-size: 10px;
     padding-left: 5px;

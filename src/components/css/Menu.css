@@ -11,6 +11,7 @@ a {
   display: block;
   position: relative;
   margin-bottom: 15px;
+  z-index: 10;
 }
 
 .menu-list {
@@ -55,9 +56,11 @@ a {
   .menu {
     height: 40px;
   }
+
   .menu-item {
     line-height: 40px;
   }
+
   .menu-link {
     font-size: 13px;
   }
@@ -67,9 +70,11 @@ a {
   .menu {
     height: 36px;
   }
+
   .menu-item {
     line-height: 36px;
   }
+
   .menu-link {
     font-size: 11px;
   }

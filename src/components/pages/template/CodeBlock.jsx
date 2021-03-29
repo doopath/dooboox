@@ -1,11 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCodeBranch,
-  faFolder,
-  faMobileAlt,
-} from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFolder, faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { Component } from "react";
+
 import tux from "../../../img/tux.svg";
 import reactIcon from "../../../img/reactLogo.svg"
 

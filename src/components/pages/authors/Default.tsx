@@ -1,35 +1,35 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
-import "../../css/AuthorsPage.css";
-import { Page } from "../Page";
+import '../../css/AuthorsPage.css'
+import { Page } from '../Page'
 
 export class Default extends Page {
-  private nameHighlighter;
+  private nameHighlighter
 
   public constructor(props: object) {
-    super({ ...props, type: "authorsPage" });
-
-    this.nameHighlighter = props["nameHighlighter"];
+    super(props)
+    this.type = 'authorsPage'
+    this.nameHighlighter = props['nameHighlighter']
   }
 
   public componentDidMount = (): void => {
     try {
-      this.turnOnPreloader();
-      this.getInitialPage();
-      this.turnOffPreloader();
+      this.turnOnPreloader()
+      this.getInitialPage()
+      this.turnOffPreloader()
     } catch (e) {
-      this.props["logger"].log(e);
+      this.props['logger'].log(e)
     }
-  };
+  }
 
   private getNewName = (newName: string) => {
-    let name: object = this.nameHighlighter;
+    let name: object = this.nameHighlighter
 
-    name["setAuthorName"](newName);
-    name["highlight"]();
+    name['setAuthorName'](newName)
+    name['highlight']()
 
-    return name["getHighlightedAuthorName"]();
-  };
+    return name['getHighlightedAuthorName']()
+  }
 
   public render = (): JSX.Element => {
     return (
@@ -39,6 +39,6 @@ export class Default extends Page {
           {this.getElement()}
         </div>
       </div>
-    );
-  };
+    )
+  }
 }

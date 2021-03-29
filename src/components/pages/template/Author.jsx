@@ -16,7 +16,7 @@ export class Author extends Component {
           <FontAwesomeIcon icon={this.props.icon} title={this.props.role} />
         </p>
         <p className="tp-author-work">
-          <span className="tp-author-work_until">Сделано: </span>
+          <span className="tp-author-work_until">Done: </span>
           <span className="tp-author-work_text">{this.props.text}</span>
         </p>
       </div>
