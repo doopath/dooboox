@@ -29,7 +29,7 @@ class ElementCreator {
     )
   }
 
-  public createCodeBlock = (items: [[string]], highlighter: syntaxHighlight): JSX.Element => {
+  public createCodeBlock = (items: [string[]], highlighter: syntaxHighlight): JSX.Element => {
     return (
       <CodeBlock
         lines={[...items["codeLines"]]}
@@ -39,17 +39,17 @@ class ElementCreator {
     )
   }
 
-  public createThemesBlock = (items: [string]): JSX.Element => {
+  public createThemesBlock = (items: string[]): JSX.Element => {
     const themesBlock: ThemesBlockEngine = new ThemesBlockEngine(items)
     themesBlock.create()
     return themesBlock.getElement()
   }
 
-  public createLinksBlock = (items: [string]): JSX.Element => {
+  public createLinksBlock = (items: string[]): JSX.Element => {
     return <LinksBlock links={items} />
   }
 
-  public createText = (texts: [string], id: string): JSX.Element => {
+  public createText = (texts: string[], id: string): JSX.Element => {
     return <Text value={texts[id]} id={id} />
   }
 
